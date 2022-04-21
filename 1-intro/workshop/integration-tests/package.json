@@ -1,13 +1,13 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dans votre terminal, dans ce répertoire lancer la commande :",
   "main": "server.js",
   "scripts": {
     "all": " node server.js & jest --watchAll --colors --coverage",
     "test": "jest --watchAll --colors --coverage",
-    "server": "node server.js"
-
+    "server": "node server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +18,6 @@
     "ejs": "^3.1.2",
     "express": "^4.16.3",
     "mongoose": "^5.2.7"
-  }
+  },
+  "keywords": []
 }
