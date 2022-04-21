@@ -6,8 +6,16 @@ require_once('./src/flatten.php');
 
 class FlattenTest extends TestCase
 {
-    public function test_something()
+    public function test__array_1()
     {
-        $this->assertEquals(1337, 1337);
+        $this->assertEquals(flatten([[17, [39, 15]], [12]]), [17, 39, 15, 12]);
+    }
+    public function test__array_2()
+    {
+        $this->assertEquals(flatten([[[17, [39, [15]]], [12]]]), [17, 39, 15, 12]);
+    }
+    public function test__array_3()
+    {
+        $this->assertEquals(flatten([17, [39, 15], 12]), [17, 39, 15, 12]);
     }
 }
