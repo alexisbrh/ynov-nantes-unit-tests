@@ -37,6 +37,14 @@ describe('Minesweeper', () => {
     it('Test calculateNumberOfAdjacentMines -> Number mines 1', () => {
         expect(field1.calculateNumberOfAdjacentMines(1, 2)).toEqual('1')
     })
+
+    it('Test function printField', () => {
+   
+        expect(field1.printField()).toEqual(
+            '*100\n' +
+            '2210\n' +
+            '1*10\n' +
+            '1110'
+        );
+    })    
 })
-
-
