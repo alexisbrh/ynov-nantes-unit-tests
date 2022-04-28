@@ -75,7 +75,7 @@ class Board {
     }
 
     printBoard() {
-
+        return '';
     }
 }
 
