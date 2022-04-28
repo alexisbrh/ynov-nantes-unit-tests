@@ -54,7 +54,7 @@ class Field {
 
     calculateNumberOfAdjacentMines(x, y) {
         for(let i = 0; i < this._mines.length; i++) {
-            if (this._mines[i].x == x && this._mines[i].y == y) {
+            if (this._mines[i].x === x && this._mines[i].y === y) {
                 return '*';
             }
         }
