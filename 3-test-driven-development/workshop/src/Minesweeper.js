@@ -22,9 +22,10 @@ class Mine {
 }
 
 class Field {
-    constructor(n, m) {
+    constructor(n, m, mines = []) {
         this._n = n;
         this._m = m;
+        this._mines = mines
     }
 
     get n() {
@@ -42,10 +43,18 @@ class Field {
     set m(value) {
         this._m = value;
     }
+
+    get mines() {
+        return this._mines;
+    }
+
+    set mines(value) {
+        this._mines = value;
+    }
 }
 
 class Board {
-    constructor(fields) {
+    constructor(fields = []) {
         this._fields = fields;
     }
 
