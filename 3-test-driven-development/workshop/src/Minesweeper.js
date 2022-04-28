@@ -59,7 +59,7 @@ class Field {
     printField() {
         let field = '';
         for(let i = 1; i <= this._n; i++) {
-            for(let j = 1; i <= this._m; j++) {
+            for(let j = 1; j <= this._m; j++) {
                 field += this.calculateNumberOfAdjacentMines(i, j);
             }
             field += '\n';
@@ -85,7 +85,7 @@ class Board {
         let board = '';
         for(let i = 0; i < this._fields.length; i++) {
             if(this._fields[i].printField()) {
-                board += 'Field #' + (i + 1) + '\n';
+                board += 'Field #' + (i + 1) + ':\n';
                 board += this._fields[i].printField();
             }
         }
