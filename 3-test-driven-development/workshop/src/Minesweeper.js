@@ -51,6 +51,14 @@ class Field {
     set mines(value) {
         this._mines = value;
     }
+
+    calculateNumberOfAdjacentMines(x, y) {
+
+    }
+
+    printField() {
+
+    }
 }
 
 class Board {
