@@ -87,7 +87,7 @@ class Field {
 
 class Board {
     constructor(fields = []) {
-        this._fields = fields;
+        this._fields = fields.filter((field) => field._n > 0 && field._m > 0);
     }
 
     get fields() {
@@ -100,14 +100,13 @@ class Board {
 
     printBoard() {
         let board = '';
-        for(let i = 0; i < this._fields.length; i++) {
-            if(this._fields[i].printField()) {
-                board += 'Field #' + (i + 1) + ':\n';
-                board += this._fields[i].printField();
 
-                if(i <= this._fields.length - 2) {
-                    board += '\n';
-                }
+        for(let i = 0; i < this._fields.length; i++) {
+            board += 'Field #' + (i + 1) + ':\n';
+            board += this._fields[i].printField();
+
+            if(i < this._fields.length - 1) {
+                board += '\n\n';
             }
         }
         return board;
