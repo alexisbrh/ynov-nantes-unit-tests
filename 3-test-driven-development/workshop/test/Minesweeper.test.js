@@ -13,7 +13,7 @@ describe('Minesweeper', () => {
 
     const board = new Board([field1, field2, field3])
 
-    // Test TDD
+    // TDD
     it('Test printBoard', () => {
         expect(board.printBoard()).toEqual('Field #1:\n' +
             '*100\n' +
@@ -42,8 +42,8 @@ describe('Minesweeper', () => {
         expect(field1.calculateNumberOfAdjacentMines(1, 2)).toEqual('1')
     })
 
+    // Unit test
     it('Test function printField', () => {
-   
         expect(field1.printField()).toEqual(
             '*100\n' +
             '2210\n' +
