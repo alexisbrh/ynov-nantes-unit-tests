@@ -92,6 +92,7 @@ class Board {
             if(this._fields[i].printField()) {
                 board += 'Field #' + (i + 1) + ':\n';
                 board += this._fields[i].printField();
+                board += '\n';
             }
         }
         return board;
