@@ -67,7 +67,7 @@ class Field {
                 }
             }
         }
-        return numberMines;
+        return numberMines.toString();
     }
 
     printField() {
