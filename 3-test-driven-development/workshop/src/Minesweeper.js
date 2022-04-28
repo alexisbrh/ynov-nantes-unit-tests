@@ -58,7 +58,16 @@ class Field {
                 return '*';
             }
         }
-        return 1;
+
+        let numberMines = 0;
+        for(let i = x - 1; i <= x + 1; i++) {
+            for(let j = y - 1; j <= y + 1;  j++) {
+                if(this._mines.some((mine) => mine.x === i && mine.y === j)) {
+                    numberMines += 1;
+                }
+            }
+        }
+        return numberMines;
     }
 
     printField() {
@@ -67,7 +76,10 @@ class Field {
             for(let j = 1; j <= this._m; j++) {
                 field += this.calculateNumberOfAdjacentMines(i, j);
             }
-            field += '\n';
+
+            if(i < this._n) {
+                field += '\n';
+            }
         }
         return field;
     }
@@ -92,7 +104,10 @@ class Board {
             if(this._fields[i].printField()) {
                 board += 'Field #' + (i + 1) + ':\n';
                 board += this._fields[i].printField();
-                board += '\n';
+
+                if(i <= this._fields.length - 2) {
+                    board += '\n';
+                }
             }
         }
         return board;
