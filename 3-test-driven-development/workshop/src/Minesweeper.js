@@ -87,7 +87,7 @@ class Field {
 
 class Board {
     constructor(fields = []) {
-        this._fields = fields.filter((field) => field._n > 0 && field._m > 0);
+        this._fields = fields.filter((field) => field._n > 0 && field._m > 0 && field._m <= 100);
     }
 
     get fields() {
