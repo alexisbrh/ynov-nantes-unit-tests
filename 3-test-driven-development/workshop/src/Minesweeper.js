@@ -53,11 +53,18 @@ class Field {
     }
 
     calculateNumberOfAdjacentMines(x, y) {
-
+        return '*';
     }
 
     printField() {
-        return ''
+        let field = '';
+        for(let i = 1; i <= this._n; i++) {
+            for(let j = 1; i <= this._m; j++) {
+                field += this.calculateNumberOfAdjacentMines(i, j);
+            }
+            field += '\n';
+        }
+        return field;
     }
 }
 
@@ -75,11 +82,11 @@ class Board {
     }
 
     printBoard() {
-        let board = ''
+        let board = '';
         for(let i = 0; i < this._fields.length; i++) {
             if(this._fields[i].printField()) {
-                board += 'Field #' + (i + 1) + '\n'
-                board += this._fields[i].printField()
+                board += 'Field #' + (i + 1) + '\n';
+                board += this._fields[i].printField();
             }
         }
         return board;
