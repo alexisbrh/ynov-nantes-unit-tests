@@ -9,7 +9,7 @@ describe('Minesweeper', () => {
 
     const field1 = new Field(4, 4, [mine1, mine2])
     const field2 = new Field(3, 5, [mine3, mine4, mine5])
-    const field3 = new Field(0, 0)
+    const field3 = new Field(1, 101)
 
     const board = new Board([field1, field2, field3])
 
