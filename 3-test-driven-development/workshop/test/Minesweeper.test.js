@@ -1,3 +1,5 @@
+
+
 it('Test output', () => {
     expect(null).toEqual('Field #1:\n' +
         '*100\n' +
