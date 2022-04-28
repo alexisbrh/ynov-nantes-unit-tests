@@ -57,7 +57,7 @@ class Field {
     }
 
     printField() {
-
+        return ''
     }
 }
 
@@ -75,7 +75,14 @@ class Board {
     }
 
     printBoard() {
-        return '';
+        let board = ''
+        for(let i = 0; i < this._fields.length; i++) {
+            if(this._fields[i].printField()) {
+                board += 'Field #' + (i + 1) + '\n'
+                board += this._fields[i].printField()
+            }
+        }
+        return board;
     }
 }
 
