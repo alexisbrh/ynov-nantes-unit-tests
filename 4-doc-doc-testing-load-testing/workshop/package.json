@@ -1,7 +1,7 @@
 {
   "name": "e-2-e-testing",
   "version": "1.0.0",
-  "description": "",
+  "description": "* ```docker-compose build``` * ```docker-compose up```",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -14,5 +14,9 @@
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
     "mongoose": "^5.4.1"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "jest": "^28.0.2"
   }
 }
