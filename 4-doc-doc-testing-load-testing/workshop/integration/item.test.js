@@ -10,6 +10,11 @@ beforeAll(async () => {
         .catch((err) => console.log(err));
 });
 
+afterAll(async () => {
+    await Todo.deleteMany({});
+    await mongoose.connection.close();
+});
+
 test('Persist', async () => {
     await Todo.create({ text: 'Item 1', done: true }, { text: 'Item 2', done: false });
 });
@@ -39,8 +44,4 @@ test('Delete', async () => {
 
     const Todo = await Todo.findOne({ name: 'Item 2.2' });
     expect(Todo).toBe(null);
-});
-
-afterAll(async () => {
-    await Todo.deleteMany({});
 });
