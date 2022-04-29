@@ -23,9 +23,16 @@ class Mine {
 
 class Field {
     constructor(n, m, mines = []) {
+        if(n <= 0) {
+            throw new Error('n should not be negative');
+        }
+        if (m <= 0) {
+            throw new Error('m should not be negative');
+        }
+
         this._n = n;
         this._m = m;
-        this._mines = mines
+        this._mines = mines;
     }
 
     get n() {
@@ -68,7 +75,7 @@ class Field {
             }
         }
         return numberMines.toString();
-    }
+    };
 
     printField() {
         let field = '';
