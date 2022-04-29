@@ -17,6 +17,7 @@
   },
   "keywords": [],
   "devDependencies": {
+    "cypress": "^9.6.0",
     "jest": "^28.0.2"
   }
 }
