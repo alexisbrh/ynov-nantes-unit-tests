@@ -4,7 +4,7 @@ describe('Minesweeper', () => {
 
     // TDD
     it('Test printBoard', () => {
-        // Then 
+        // Given 
         const ymines1 = 1; 
         const xmines1 = 1; 
 
