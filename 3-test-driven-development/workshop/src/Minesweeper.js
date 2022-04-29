@@ -23,6 +23,10 @@ class Mine {
 
 class Field {
     constructor(n, m, mines = []) {
+        if(n <= 0 || m <= 0) {
+            throw new Error('N or M should not be negative');
+        }
+
         this._n = n;
         this._m = m;
         this._mines = mines
