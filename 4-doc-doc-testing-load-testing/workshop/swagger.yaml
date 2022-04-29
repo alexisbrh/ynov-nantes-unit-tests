@@ -1,0 +1,66 @@
+swagger: "2.0"
+info:
+  description: "Documentation for ToDoApp"
+  version: "1.0.0"
+  title: "Swagger ToDoApp"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:5000"
+schemes:
+  - "http"
+paths:
+  /todo:
+    post:
+      tags:
+        - "todo"
+      summary: "Add a new todo"
+      description: ""
+      operationId: "addTodo"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "text"
+          description: "Texte"
+          required: true
+          schema:
+            $ref: '#/definitions/Todo'
+      responses:
+        "201":
+          description: "Success"
+        "400":
+          description: "Invalid input"
+
+    get:
+      tags:
+        - "todo"
+      summary: "Get all todos"
+      description: ""
+      operationId: "getTodos"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Success"
+        "400":
+          description: "Bad request"
+
+definitions:
+  Todo:
+    type: "object"
+    required:
+      - "text"
+    properties:
+      text:
+        type: "string"
+        example: "Item 1"
+    xml:
+      name: "Todo"

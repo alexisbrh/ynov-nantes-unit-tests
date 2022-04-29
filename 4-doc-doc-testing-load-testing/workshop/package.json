@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "jest"
+    "test": "jest",
+    "start:dev": "nodemon server.js",
+    "cypress:open": "cypress open"
   },
   "author": "",
   "license": "ISC",
@@ -13,9 +15,13 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.1",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "swagger-ui-express": "^4.3.0",
+    "yamljs": "^0.3.0"
   },
+  "keywords": [],
   "devDependencies": {
+    "cypress": "^9.6.0",
     "jest": "^28.0.3"
   }
 }
