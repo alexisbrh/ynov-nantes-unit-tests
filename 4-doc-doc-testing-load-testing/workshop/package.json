@@ -1,7 +1,7 @@
 {
   "name": "e-2-e-testing",
   "version": "1.0.0",
-  "description": "",
+  "description": "* ```docker-compose build``` * ```docker-compose up```",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
